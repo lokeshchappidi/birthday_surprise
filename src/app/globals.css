@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+body {
+  background-color: red !important;
+}
+
+/* REALISTIC FLAME ANIMATION */
+@keyframes flicker {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  25% { transform: scale(1.1, 0.9) skewX(2deg); opacity: 0.8; }
+  50% { transform: scale(0.9, 1.1) skewX(-2deg); opacity: 1; }
+  75% { transform: scale(1.05, 0.95) skewX(1deg); opacity: 0.9; }
+}
+
+.flame {
+  background: radial-gradient(ellipse at bottom, #ffff00 0%, rgba(255,165,0,0.8) 60%, rgba(255,69,0,0.5) 90%);
+  border-radius: 50% 50% 20% 20%;
+  animation: flicker 1.2s infinite ease-in-out alternate;
+  transform-origin: center bottom;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.6), 0 0 60px rgba(255, 140, 0, 0.4);
+}
+
+.smoke {
+  animation: rise 2s forwards;
+}
+
+@keyframes rise {
+  0% { opacity: 0.8; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-50px) scale(2); }
+}
+
+/* 🎂 CANDLE ANIMATIONS */
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66px;
+  height: 18px;
+}
+
+/* Animation Speeds */
+.animate-fuego-1 { animation: fuego 2s infinite; }
+.animate-fuego-2 { animation: fuego 1.5s infinite; }
+.animate-fuego-3 { animation: fuego 1s infinite; }
+.animate-fuego-4 { animation: fuego 0.5s infinite; }
+.animate-fuego-5 { animation: fuego 0.2s infinite; }
