@@ -104,7 +104,7 @@ const FlipPolaroid = ({ photo, onClick }) => {
 
 // 🌡️ CUTENESS METER
 const CutenessMeter = ({ level }) => (
-    <div className="w-full max-w-md mx-auto mb-8 z-30 relative px-4 hidden md:block">
+    <div className="w-full max-w-md mx-auto mb-3 z-30 relative px-4 hidden md:block">
       <div className="flex justify-between items-end mb-2 font-bold tracking-widest uppercase">
          <div className="flex items-center gap-2 text-pink-200/90 text-base md:text-lg shadow-black drop-shadow-md">
            Timeless Memories
@@ -213,10 +213,10 @@ export default function PhotoBookScreen({ onComplete }) {
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1 }} 
                 transition={{ duration: 1 }}
-                className="absolute inset-0 z-30 overflow-y-auto bg-black/60 backdrop-blur-xl p-4 md:p-8 flex flex-col items-center animate-fade-in custom-scrollbar"
+              className="absolute inset-0 z-30 overflow-y-auto bg-black/60 backdrop-blur-xl p-4 md:p-5 flex flex-col items-center animate-fade-in custom-scrollbar"
             >
             
-            <div className="text-center mb-8 mt-4 z-40">
+            <div className="text-center mb-4 md:mb-5 mt-2 md:mt-3 z-40">
                 <motion.div 
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -238,7 +238,7 @@ export default function PhotoBookScreen({ onComplete }) {
                     hidden: { opacity: 0 },
                     show: { opacity: 1, transition: { staggerChildren: 0.05 } }
                 }}
-                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-5xl pb-32" // Added pb-32 to clear button
+                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 w-full max-w-4xl pb-32" // Added pb-32 to clear button
             >
                 {photos.map((photo) => (
                 <motion.div
@@ -269,14 +269,14 @@ export default function PhotoBookScreen({ onComplete }) {
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl font-handwriting text-white mb-4 drop-shadow-md text-center"
+            className="text-3xl md:text-4xl font-handwriting text-white mb-2 md:mb-3 drop-shadow-md text-center"
           >
             A Great Sister From Serbia 👑 <Sparkles className="inline-block text-yellow-300" size={32} />
           </motion.h2>
 
           <CutenessMeter level={cuteness} />
 
-          <div className="relative w-full max-w-md aspect-3/4 flex items-center justify-center">
+          <div className="relative w-full max-w-md md:max-w-[360px] aspect-3/4 flex items-center justify-center">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={index}
@@ -307,7 +307,7 @@ export default function PhotoBookScreen({ onComplete }) {
                 </div>
 
                 <div className="mt-6 text-center w-full">
-                    <p className="text-gray-800 font-handwriting text-4xl drop-shadow-sm font-bold opacity-90">
+                    <p className="text-gray-800 font-handwriting text-3xl md:text-3xl drop-shadow-sm font-bold opacity-90">
                       {photos[index].caption}
                     </p>
                 </div>
@@ -315,7 +315,7 @@ export default function PhotoBookScreen({ onComplete }) {
             </AnimatePresence>
           </div>
 
-          <div className="flex items-center gap-8 mt-6 z-20">
+          <div className="flex items-center gap-6 mt-3 md:mt-4 z-20">
             <button 
               onClick={prevPhoto}
               disabled={index === 0}

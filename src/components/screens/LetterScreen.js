@@ -157,7 +157,7 @@ Lokesh 😊`;
     };
 
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen w-full z-50 animate-fade-in relative p-4 overflow-y-auto">
+      <div className="flex flex-col items-center justify-center min-h-screen w-full z-50 animate-fade-in relative p-4 overflow-y-auto scale-[0.80] md:scale-[0.70] origin-center">
 
         <style jsx global>{`
           @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -181,7 +181,7 @@ Lokesh 😊`;
             type: "spring",
             stiffness: 100,
           }}
-          className="relative w-64 h-48 md:w-80 md:h-56 bg-linear-to-br from-pink-400 to-rose-400 rounded-lg shadow-2xl flex items-center justify-center overflow-hidden z-10 shrink-0"
+          className="relative w-52 h-40 md:w-64 md:h-44 bg-linear-to-br from-pink-400 to-rose-400 rounded-lg shadow-2xl flex items-center justify-center overflow-hidden z-10 shrink-0"
         >
           <div className="absolute top-0 left-0 w-full h-full border-l-130 border-r-130 border-t-100 border-l-transparent border-r-transparent border-t-pink-300/50 mix-blend-overlay" />
 
@@ -197,7 +197,7 @@ Lokesh 😊`;
                 delay: 0.2,
                 type: "spring",
               }}
-              className="w-16 h-16 bg-red-600 rounded-full border-4 border-red-800 shadow-xl flex items-center justify-center relative"
+           className="w-12 h-12 md:w-14 md:h-14 bg-red-600 rounded-full border-4 border-red-800 shadow-xl flex items-center justify-center relative"
             >
               <Heart
                 size={24}
@@ -241,7 +241,7 @@ Lokesh 😊`;
                 <motion.span
                   key={charIndex}
                   variants={letterVariants}
-                  className="inline-block relative text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-gray-800"
+                  className="inline-block relative text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-800"
                   style={{
                     textShadow:
                       "0px 1px 2px rgba(0, 0, 0, 0.12)",
@@ -274,7 +274,7 @@ Lokesh 😊`;
                 <motion.span
                   key={charIndex}
                   variants={letterVariants}
-                  className="inline-block relative text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-gray-800"
+                  className="inline-block relative text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-800"
                   style={{
                     textShadow:
                       "0px 1px 2px rgba(0, 0, 0, 0.12)",
@@ -331,7 +331,7 @@ Lokesh 😊`;
             duration: 1,
           }}
           onClick={onBack}
-          className="flex items-center gap-2 px-8 py-3 bg-linear-to-r from-red-500 to-pink-600 text-white font-handwriting text-xl rounded-full hover:shadow-pink-500/40 hover:scale-105 transition-all font-bold uppercase tracking-widest shadow-lg z-20 mb-10"
+          className="flex items-center gap-2 px-8 py-3 md:px-10 md:py-4 md:text-2xl bg-linear-to-r from-red-500 to-pink-600 text-white font-handwriting text-xl rounded-full hover:shadow-pink-500/40 hover:scale-105 transition-all font-bold uppercase tracking-widest shadow-lg z-20 mb-10"
         >
           <RefreshCw size={18} />
           To Replay Experience Click Here

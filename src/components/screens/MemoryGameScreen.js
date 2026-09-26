@@ -163,9 +163,14 @@ export default function MemoryGameScreen({ onComplete }) {
             {/* 2️⃣ CENTER SECTION: THE GAME GRID */}
             <div className="md:col-span-4 flex flex-col items-center justify-center order-1 md:order-2 z-20">
                 
-                <div className="md:hidden text-center mb-6">
-                    <h1 className="text-4xl font-bold text-white font-handwriting drop-shadow-xl">Match the Vibe</h1>
-                </div>
+                <div className="md:hidden text-center mb-4 px-2">
+    <h1 className="text-3xl font-sans font-black text-white leading-tight drop-shadow-xl">
+        PLAY THE PUZZLE
+        <span className="block text-purple-300">
+            GAME HERE
+        </span>
+    </h1>
+</div>
 
                 {/* 🎮 GRID */}
                 <div className={`

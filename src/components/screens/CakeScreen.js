@@ -611,7 +611,7 @@ export default function CakeScreen({ onComplete }) {
 
             {/* 🎂 RESPONSIVE CAKE CONTAINER */}
             <div
-              className={`relative w-64 h-[52vh] max-h-[500px] md:w-96 md:h-[60vh] md:max-h-[500px] flex justify-center items-end mt-20 md:mt-16 transition-all ${
+              className={`relative w-64 h-[40vh] max-h-[400px] md:w-96 md:h-[48vh] md:max-h-[450px] flex justify-center items-end mt-16 md:mt-10 mb-6 md:mb-8 transition-all ${
                 isWishing && !isBlownOut
                   ? "cursor-pointer"
                   : ""
@@ -726,7 +726,7 @@ export default function CakeScreen({ onComplete }) {
                       damping: 15,
                       mass: 1,
                     }}
-                    className="w-full h-full z-20 scale-110 md:scale-125"
+                    className="w-full h-full z-20 scale-110 md:scale-120"
                   >
                     <MemoizedCakeSVG />
                   </motion.div>
@@ -754,7 +754,7 @@ export default function CakeScreen({ onComplete }) {
   transition={{
     duration: 1,
   }}
-  className="relative w-full text-center z-50 px-3 mt-4 md:mt-6"
+ className="relative w-full text-center z-50 px-3 mt-0"
 >
   <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-[#fdfaf1] drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] leading-tight">
     Happyy Birthday
@@ -765,7 +765,7 @@ export default function CakeScreen({ onComplete }) {
 </motion.div>
 
             {/* ➡️ NEXT BUTTON */}
-            <div className="absolute bottom-4 md:bottom-6 left-0 right-0 w-full flex justify-center z-[60] pointer-events-auto px-4">
+            <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 w-full flex justify-center z-[60] pointer-events-auto px-4">
               <AnimatePresence>
                 {showNextButton && (
                   <motion.button
